@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forcelli's to do</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #F0F9FF; color: #1e1b4b; }
+        .animate-fade-in { animation: fadeIn 0.4s ease-out; }
+        .animate-slide-in { animation: slideIn 0.3s ease-out; }
+        
+        @keyframes entryPop {
+          0% { opacity: 0; transform: scale(0.9) translateY(10px); }
+          70% { transform: scale(1.03) translateY(-2px); }
+          100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .animate-entry { 
+          animation: entryPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; 
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideIn {
+          from { opacity: 0; transform: translateX(-10px); }
+          to { opacity: 1; transform: translateX(0); }
+        }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+        input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+            filter: invert(0.5) sepia(1) saturate(5) hue-rotate(240deg);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-[#F0F9FF]">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

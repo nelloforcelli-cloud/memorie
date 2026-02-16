@@ -1,0 +1,7 @@
+{
+  "name": "Forcelli's to do",
+  "description": "Un'app intelligente per la gestione degli impegni personali e familiari, con inserimento vocale avanzato tramite AI.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
